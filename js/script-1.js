@@ -109,34 +109,115 @@
 //   return longestWord;
 // }
 
-const pizzaPalace = {
-  pizzas: ["Ultracheese", "Smoked", "Four meats"],
-  order(pizzaName, onSuccess, onError) {
-    const error = `There is no pizza with a name ${pizzaName} in the assortment.`;
-      if (this.pizzas.includes(pizzaName)) {
-          console.log(pizzaName);
-    onSuccess(pizzaName);
-    }
-      else {
-          onError(pizzaName);
-      console.log(`There is no pizza with a name ${pizzaName} in the assortment.`)}
+// const pizzaPalace = {
+//   pizzas: ["Ultracheese", "Smoked", "Four meats"],
+//   order(pizzaName, onSuccess, onError) {
+//     const error = `There is no pizza with a name ${pizzaName} in the assortment.`;
+//       if (this.pizzas.includes(pizzaName)) {
+//           console.log(pizzaName);
+//     onSuccess(pizzaName);
+//     }
+//       else {
+//           onError(pizzaName);
+//       console.log(`There is no pizza with a name ${pizzaName} in the assortment.`)}
       
-  },
-};
-// 
-// Change code above this line
-// Callback for onSuccess
-function makePizza(pizzaName) {
-  return `Your order is accepted. Cooking pizza ${pizzaName}.`;
-}
+//   },
+// };
+// //
+// // Change code above this line
+// // Callback for onSuccess
+// function makePizza(pizzaName) {
+//   return `Your order is accepted. Cooking pizza ${pizzaName}.`;
+// }
 
-// Callback for onError
-function onOrderError(error) {
-  return `Error! ${error}`;
-}
+// // Callback for onError
+// function onOrderError(error) {
+//   return `Error! ${error}`;
+// }
 
-// Method calls with callbacks
-pizzaPalace.order("Smoked", makePizza, onOrderError);
-pizzaPalace.order("Four meats", makePizza, onOrderError);
-pizzaPalace.order("Big Mike", makePizza, onOrderError);
-pizzaPalace.order("Vienna", makePizza, onOrderError);
+// // Method calls with callbacks
+// pizzaPalace.order("Smoked", makePizza, onOrderError);
+// pizzaPalace.order("Four meats", makePizza, onOrderError);
+// pizzaPalace.order("Big Mike", makePizza, onOrderError);
+// pizzaPalace.order("Vienna", makePizza, onOrderError);
+
+
+// 29.08.2013(Callback functions)
+
+//TASK  1
+// function createProduct(obj, callback) {
+//     const newObj = {
+//         id: Date.now(),
+//         ...obj
+//     };
+//     callback(newObj);
+// }
+// function logProduct(product) {
+//     console.log(product);
+// }
+// function logTotalPrice({name, price, quantity }) {
+//     console.log(`Total price of ${name} - ${price * quantity}`)
+// }
+// createProduct({ name: "Apples", price: 15, quantity: 10 }, logProduct);
+// createProduct({ name: "Oranges", price: 60, quantity: 7 }, logTotalPrice);
+
+//TASK  2
+// function each(arr, callback) {
+//   return arr.map(number => callback(number));
+// }
+
+// function each(arr, callback) {
+//     const array = [];
+//     arr.forEach(number => array.push(callback(number)));
+//     return array;
+// }
+// console.log(each([1, 2, 3, 4, 5], value => value * 2));
+// console.log(each([1, 2, 3, 4, 5], value => value ** 2));
+
+// //TASK  3
+// const products = [
+//     {id: 1, name: 'Beef', price: 250},
+//     {id: 2, name: 'Chicken', price: 140},
+//     {id: 3, name: 'Pork', price: 210}
+// ]
+// function getProductDetails(id, onSuccess, onError) {
+//     for (const product of products) {
+//         if (product.id === id) {
+//             onSuccess(product);
+//             return;
+//         }
+//     }
+//     onError(id);
+// }
+// function handleSuccess(product) {
+//     console.log(`Success! Product ${product.name} is on the list! Price - ${product.price}`)
+// };
+// function handleError(productId) {
+//     console.log(`Error!!!! There is no products with id - ${productId}`)
+// };
+// getProductDetails(2, handleSuccess, handleError);
+// getProductDetails(22, handleSuccess, handleError);
+
+// //TASK 4
+// const products = [
+//     {id: 1, name: 'Beef', price: 250},
+//     {id: 2, name: 'Chicken', price: 140},
+//     {id: 3, name: 'Pork', price: 210}
+// ]
+// function getAveragePrice(products, onSuccess, onError) {
+//     if (!products.length) {
+//         return onError();
+//     }
+//     let total = 0;
+//     for (const product of products) {
+//         total += product.price;
+//     }
+//     const averagePrice = total / products.length;
+//     return onSuccess(averagePrice);
+// };
+// const onSuccess = (price) => `Average price of the products - ${price}`;
+// const onError = () => "Error!!! There is no product in products!!!";
+
+
+// console.log(getAveragePrice(products, onSuccess, onError));
+// console.log(getAveragePrice([], onSuccess, onError));
