@@ -80,63 +80,85 @@
 // }
 // console.log(sum);
 
-// function findLongestWord(string) {
-//   let mass = string.split(" ");
-//   let longestWord = mass[0];
-//   for (let i = 1; i < mass.length; i += 1){
-//     if(mass[i].length > longestWord.length){
-//         longestWord = mass[i];
-        
+// // Напишіть код, виконавши завдання з кожного пункту окремим рядком:
+// // Створіть порожній об’єкт user.
+// // Додайте властивість name зі значенням Іван.
+// // Додайте властивість surname зі значенням Сміт.
+// // Змініть значення name на Петро.
+// // Видаліть властивість name з об’єкта.
+// const user = {};
+// console.log(user);
+// user.name = "Іван";
+// console.log(user);
+// user.surname = "Сміт";
+// console.log(user);
+// user["name"] = "Петро";
+// console.log(user);
+// delete user.name;
+// console.log(user);
+
+// // Напишіть функцію isEmpty(obj), яка повертає true, якщо об’єкт не має властивості, інакше false.
+// function isEmpty(obj){
+//     for(let object in obj){
+//         return false;
 //     }
+//     return true;
+// }
+// console.log(isEmpty({name: "Katya", surname: "kffgj"}));
+// console.log(isEmpty({}));
+
+// // Визначаємо суму значеть властивостей об'єкта
+// let salaries = {
+//     John: 100,
+//     Ann: 160,
+//     Pete: 130
 //   }
-//   return longestWord;
+//  const arrayValues = Object.values(salaries);
+//  let sum = 0;
+//  for(const value of arrayValues){
+//     sum += value;
+//  } 
+//  console.log(sum);
+
+//Написати функцію, що повертає через скільки років, або скільки років тому батько був вдвічі старше за сина.
+// function countTwiceAge(dadAge, sonAge){
+//     if(dadAge > 150 || dadAge <= 0 || sonAge > 150 || sonAge < 0){
+//         return "Wrong age! Please, check it!"
+//     }
+//     else if(dadAge / sonAge === 2){
+//         return `Dad is twice older his son now`;
+//     }
+//     else {
+//         let dad = dadAge - sonAge;
+//         let son = 0;
+//         while(dad / son !== 2){
+//             dad +=1;
+//             son +=1;
+//             // console.log(dad, son);
+//         }
+//         console.log(dad, son);
+//         if(dad < dadAge){
+//             return `Dad was twice older his son ${dadAge - dad} years ago`;
+//         }
+//         else if (dad > dadAge){
+//             return `Dad will be twice older his son for ${dad - dadAge} years`;
+//         }
+    
+//     }
 // }
 
-// console.log(findLongestWord("The quick brown fox jumped over the lazy dog"));
-// console.log(findLongestWord("May the force be with you"));
+// console.log(countTwiceAge(190, 33));
+// console.log(countTwiceAge(90, 50));
+// console.log(countTwiceAge(90, 33));
+// console.log(countTwiceAge(24, 12));
+// console.log(countTwiceAge(9, 4));
+// console.log(countTwiceAge(36, 31));
+// const students = [
+//     { name: "Манго", score: 83, courses: ["математика", "фізика"] },
+//     { name: "Полі", score: 59, courses: ["інформатика", "математика"] },
+//     { name: "Аякс", score: 37, courses: ["фізика", "біологія"] },
+//     { name: "Ківі", score: 94, courses: ["література", "інформатика"] },
+//   ];
 
-// function findLongestWord(string) {
-//   let mass = string.split(" ");
-//     let longestWord = mass[0];
-//     let wordLength = mass[0].length;
-//     for (let i = 1; i < mass.length; i += 1){
-//         console.log(wordLength);
-//     if(mass[i].length > wordLength){
-//         longestWord = mass[i];
-//         wordLength = mass[i].length;
-//     }
-//   }
-//   return longestWord;
-// }
-
-const pizzaPalace = {
-  pizzas: ["Ultracheese", "Smoked", "Four meats"],
-  order(pizzaName, onSuccess, onError) {
-    const error = `There is no pizza with a name ${pizzaName} in the assortment.`;
-      if (this.pizzas.includes(pizzaName)) {
-          console.log(pizzaName);
-    onSuccess(pizzaName);
-    }
-      else {
-          onError(pizzaName);
-      console.log(`There is no pizza with a name ${pizzaName} in the assortment.`)}
-      
-  },
-};
-// 
-// Change code above this line
-// Callback for onSuccess
-function makePizza(pizzaName) {
-  return `Your order is accepted. Cooking pizza ${pizzaName}.`;
-}
-
-// Callback for onError
-function onOrderError(error) {
-  return `Error! ${error}`;
-}
-
-// Method calls with callbacks
-pizzaPalace.order("Smoked", makePizza, onOrderError);
-pizzaPalace.order("Four meats", makePizza, onOrderError);
-pizzaPalace.order("Big Mike", makePizza, onOrderError);
-pizzaPalace.order("Vienna", makePizza, onOrderError);
+// const unicCourses = students.flatMap(student => student.courses).filter((course,idx,arr) => arr.indexOf(course) === idx).sort((course1, course2) => course1.localeCompare(course2));
+// console.log(unicCourses);
