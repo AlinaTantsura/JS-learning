@@ -147,18 +147,34 @@
 //     }
 // }
 
-// console.log(countTwiceAge(190, 33));
-// console.log(countTwiceAge(90, 50));
-// console.log(countTwiceAge(90, 33));
-// console.log(countTwiceAge(24, 12));
-// console.log(countTwiceAge(9, 4));
-// console.log(countTwiceAge(36, 31));
-// const students = [
-//     { name: "Манго", score: 83, courses: ["математика", "фізика"] },
-//     { name: "Полі", score: 59, courses: ["інформатика", "математика"] },
-//     { name: "Аякс", score: 37, courses: ["фізика", "біологія"] },
-//     { name: "Ківі", score: 94, courses: ["література", "інформатика"] },
-//   ];
+const pizzaPalace = {
+  pizzas: ["Ultracheese", "Smoked", "Four meats"],
+  order(pizzaName, onSuccess, onError) {
+    const error = `There is no pizza with a name ${pizzaName} in the assortment.`;
+      if (this.pizzas.includes(pizzaName)) {
+          console.log(pizzaName);
+    onSuccess(pizzaName);
+    }
+      else {
+          onError(pizzaName);
+      console.log(`There is no pizza with a name ${pizzaName} in the assortment.`)}
+      
+  },
+};
+// 
+// Change code above this line
+// Callback for onSuccess
+function makePizza(pizzaName) {
+  return `Your order is accepted. Cooking pizza ${pizzaName}.`;
+}
 
-// const unicCourses = students.flatMap(student => student.courses).filter((course,idx,arr) => arr.indexOf(course) === idx).sort((course1, course2) => course1.localeCompare(course2));
-// console.log(unicCourses);
+// Callback for onError
+function onOrderError(error) {
+  return `Error! ${error}`;
+}
+
+// Method calls with callbacks
+pizzaPalace.order("Smoked", makePizza, onOrderError);
+pizzaPalace.order("Four meats", makePizza, onOrderError);
+pizzaPalace.order("Big Mike", makePizza, onOrderError);
+pizzaPalace.order("Vienna", makePizza, onOrderError);
