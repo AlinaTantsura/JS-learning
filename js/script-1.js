@@ -147,34 +147,38 @@
 //     }
 // }
 
-const pizzaPalace = {
-  pizzas: ["Ultracheese", "Smoked", "Four meats"],
-  order(pizzaName, onSuccess, onError) {
-    const error = `There is no pizza with a name ${pizzaName} in the assortment.`;
-      if (this.pizzas.includes(pizzaName)) {
           console.log(pizzaName);
-    onSuccess(pizzaName);
-    }
-      else {
-          onError(pizzaName);
-      console.log(`There is no pizza with a name ${pizzaName} in the assortment.`)}
+// const pizzaPalace = {
+//   pizzas: ["Ultracheese", "Smoked", "Four meats"],
+//   order(pizzaName, onSuccess, onError) {
+//     const error = `There is no pizza with a name ${pizzaName} in the assortment.`;
+//       if (this.pizzas.includes(pizzaName)) {
+//           console.log(pizzaName);
+//     onSuccess(pizzaName);
+//     }
+//       else {
+//           onError(pizzaName);
+//       console.log(`There is no pizza with a name ${pizzaName} in the assortment.`)}
       
-  },
-};
-// 
-// Change code above this line
-// Callback for onSuccess
-function makePizza(pizzaName) {
-  return `Your order is accepted. Cooking pizza ${pizzaName}.`;
-}
+//   },
+// };
+// // 
+// // Change code above this line
+// // Callback for onSuccess
+// function makePizza(pizzaName) {
+//   return `Your order is accepted. Cooking pizza ${pizzaName}.`;
+// }
 
-// Callback for onError
-function onOrderError(error) {
-  return `Error! ${error}`;
-}
+// // Callback for onError
+// function onOrderError(error) {
+//   return `Error! ${error}`;
+// }
 
-// Method calls with callbacks
-pizzaPalace.order("Smoked", makePizza, onOrderError);
-pizzaPalace.order("Four meats", makePizza, onOrderError);
-pizzaPalace.order("Big Mike", makePizza, onOrderError);
-pizzaPalace.order("Vienna", makePizza, onOrderError);
+// pizzaPalace.order("Smoked", makePizza, onOrderError);
+// pizzaPalace.order("Four meats", makePizza, onOrderError);
+// pizzaPalace.order("Big Mike", makePizza, onOrderError);
+// pizzaPalace.order("Vienna", makePizza, onOrderError);
+
+// // console.log(getAveragePrice(products, onSuccess, onError));
+// // console.log(getAveragePrice([], onSuccess, onError));
+
