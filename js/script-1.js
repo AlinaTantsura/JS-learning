@@ -117,7 +117,7 @@
 //  let sum = 0;
 //  for(const value of arrayValues){
 //     sum += value;
-//  } 
+//  }
 //  console.log(sum);
 
 //Написати функцію, що повертає через скільки років, або скільки років тому батько був вдвічі старше за сина.
@@ -147,7 +147,6 @@
 //     }
 // }
 
-          console.log(pizzaName);
 // const pizzaPalace = {
 //   pizzas: ["Ultracheese", "Smoked", "Four meats"],
 //   order(pizzaName, onSuccess, onError) {
