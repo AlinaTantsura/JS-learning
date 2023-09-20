@@ -173,11 +173,180 @@
 //   return `Error! ${error}`;
 // }
 
+<<<<<<< Updated upstream
+=======
+// // Method calls with callbacks
+>>>>>>> Stashed changes
 // pizzaPalace.order("Smoked", makePizza, onOrderError);
 // pizzaPalace.order("Four meats", makePizza, onOrderError);
 // pizzaPalace.order("Big Mike", makePizza, onOrderError);
 // pizzaPalace.order("Vienna", makePizza, onOrderError);
 
+<<<<<<< Updated upstream
 // // console.log(getAveragePrice(products, onSuccess, onError));
 // // console.log(getAveragePrice([], onSuccess, onError));
+=======
+// Task-1
+// Напишіть функцію, яка використовує метод map, щоб створити новий масив об'єктів, в якому буде інформація про середній бал кожного студента.
+// const students = [
+//   { name: "John", grades: [80, 85, 90] }, //  { name: "John", average: 85 }
+//   { name: "Alice", grades: [90, 95, 92] },
+//   { name: "Bob", grades: [70, 80, 75] },
+//   { name: "Emily", grades: [95, 92, 88] },
+//   { name: "David", grades: [85, 88, 90] },
+// ];
+
+// function withAverageGrade(arrayOfStudents){
+//     let accs = 0;
+//     const array = arrayOfStudents.map(({name, grades}) => {
+//     const grade = grades.reduce((acc, grade) => acc += grade, 0);
+//         return {name, averageGrade: Math.round(grade / grades.length)};
+//     })
+// return array;
+// }
+
+// console.log(withAverageGrade(students));
+
+// Task-2
+// Напишіть функцію, яка використовує метод filter, щоб створити новий масив, в якому будуть тільки студенти які старше 20 років
+
+// const students = [
+//   { name: "John", age: 20, gpa: 3.8 },
+//   { name: "Alice", age: 21, gpa: 3.2 },
+//   { name: "Bob", age: 19, gpa: 3.5 },
+//   { name: "Emily", age: 22, gpa: 3.9 },
+//   { name: "David", age: 20, gpa: 3.7 },
+// ];
+// function whoIsOlderTwenty(array){
+//    return array.filter(({age}) => age > 20);
+// }
+// console.log(whoIsOlderTwenty(students));
+
+// Task-3
+// Напишіть функцію, яка використовує метод find, щоб знайти книжку за її назвою (title).
+// Якщо книгу не знайдено повертається рядок 'Not found'.
+// const books = [
+//   {
+//     title: "JavaScript: The Good Parts",
+//     author: "Douglas Crockford",
+//     year: 2008,
+//   },
+//   {
+//     title: "Clean Code: A Handbook of Agile Software Craftsmanship",
+//     author: "Robert C. Martin",
+//     year: 2008,
+//   },
+//   {
+//     title: "The Pragmatic Programmer: Your Journey to Mastery",
+//     author: "Andrew Hunt, David Thomas",
+//     year: 1999,
+//   },
+//   {
+//     title: "Design Patterns: Elements of Reusable Object-Oriented Software",
+//     author: "Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides",
+//     year: 1994,
+//   },
+//   {
+//     title: "Refactoring: Improving the Design of Existing Code",
+//     author: "Martin Fowler",
+//     year: 1999,
+//   },
+// ];
+// function findBookByTitle(array, name){
+//    const findBook = array.find(({title}) => title === name);
+//    return findBook || 'Not found';
+// }
+// console.log(findBookByTitle(books, 'Clean Code: A Handbook of Agile Software Craftsmanship'));
+// console.log(findBookByTitle(books, 'Harry Potter'))
+
+// Task-4
+// Напишіть функцію, яка використовує метод reduce, щоб обчислити загальну вартість всіх товарів у масиві, яка розраховується як добуток ціни товару на його кількість, а потім сумується з іншими товарами.
+//  Результат повинен бути загальною вартістю всіх товарів.
+// const products = [
+//   { id: 1, name: "T-shirt", price: 20, quantity: 3 }, // 20 * 3 = 60
+//   { id: 2, name: "Jeans", price: 50, quantity: 2 },
+//   { id: 3, name: "Sneakers", price: 80, quantity: 1 },
+//   { id: 4, name: "Hat", price: 15, quantity: 4 },
+//   { id: 5, name: "Socks", price: 5, quantity: 6 },
+// ];
+// function countTotalPrice(array){
+//     const result = array.reduce((acc, {price, quantity}) => acc += price * quantity, 0);
+//     return result;
+// }
+// console.log(countTotalPrice(products));
+
+// Task-5
+// Напишіть функцію, яка використовує метод sort, щоб відсортувати книжки за роком видання у спадаючому порядку.
+// Результат повинен бути відсортованим масивом книжок за роком видання.
+// const books = [
+//   {
+//     title: "JavaScript: The Good Parts",
+//     author: "Douglas Crockford",
+//     year: 2008,
+//   },
+//   {
+//     title: "Clean Code: A Handbook of Agile Software Craftsmanship",
+//     author: "Robert C. Martin",
+//     year: 2008,
+//   },
+//   {
+//     title: "The Pragmatic Programmer: Your Journey to Mastery",
+//     author: "Andrew Hunt, David Thomas",
+//     year: 1999,
+//   },
+//   {
+//     title: "Design Patterns: Elements of Reusable Object-Oriented Software",
+//     author: "Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides",
+//     year: 1994,
+//   },
+//   {
+//     title: "Refactoring: Improving the Design of Existing Code",
+//     author: "Martin Fowler",
+//     year: 1999,
+//   },
+// ];
+// function sortBooks(array){
+//     return [...array].sort((item1, item2) => item1.year - item2.year);
+// }
+// console.log(sortBooks(books));
+
+// Task-6
+// Напишіть функцію, яка використовує перебираючі методи масиву map та filter, щоб отримати масив назв продуктів, ціна яких менше 2 доларів та відсортуй їх за алфавітним порядком.
+// const products = [
+//     { id: 2, name: "Banana", price: 0.99 },//
+//     { id: 1, name: "Apple", price: 1.99 },//
+//     { id: 3, name: "Orange", price: 2.49 },//
+//     { id: 4, name: "Grapes", price: 3.99 },//
+//   ];
+// function sortProducts(array){
+//    return array.filter(({price}) => price < 2).map(({name}) => name).sort((item1, item2) => item1.localeCompare(item2));
+// }
+// console.log(sortProducts(products));
+
+// Task-7 HARD 😈
+
+// Є рядок в якому довільна кількість літер, гарантовано в рядку немає пробілів та розділових знаків, 
+// потрібно повернути об'єкт де кожна літера буде ключем, а кількість разів яку вона дублюється буде значенням ключа
+
+// Результат на який очікуємо
+// const obj = {
+//     a: 3,
+//     b: 4,
+//     s: 3,
+//     // ...
+// }
+// const str = "absdabsrgbadgtdswwbetflg";
+// const obj = {};
+// const arr = str.split("");
+// console.log(arr);
+// for(let j = 0; j < str.length; j += 1){
+//     if(obj.hasOwnProperty(str[j])){
+//         obj[str[j]] += 1;
+//     }
+//     else{
+//         obj[str[j]] = 1;
+//     }
+// }
+// console.log(obj);
+>>>>>>> Stashed changes
 
