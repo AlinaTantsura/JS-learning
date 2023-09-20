@@ -173,19 +173,14 @@
 //   return `Error! ${error}`;
 // }
 
-<<<<<<< Updated upstream
-=======
 // // Method calls with callbacks
->>>>>>> Stashed changes
 // pizzaPalace.order("Smoked", makePizza, onOrderError);
 // pizzaPalace.order("Four meats", makePizza, onOrderError);
 // pizzaPalace.order("Big Mike", makePizza, onOrderError);
 // pizzaPalace.order("Vienna", makePizza, onOrderError);
 
-<<<<<<< Updated upstream
 // // console.log(getAveragePrice(products, onSuccess, onError));
 // // console.log(getAveragePrice([], onSuccess, onError));
-=======
 // Task-1
 // Напишіть функцію, яка використовує метод map, щоб створити новий масив об'єктів, в якому буде інформація про середній бал кожного студента.
 // const students = [
@@ -348,5 +343,4 @@
 //     }
 // }
 // console.log(obj);
->>>>>>> Stashed changes
 
